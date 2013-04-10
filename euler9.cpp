@@ -40,7 +40,6 @@ private:
 	int c;
 };
 
-
 int main(void)
 {
 	Triplet triplet;
