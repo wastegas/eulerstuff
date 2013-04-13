@@ -11,15 +11,13 @@ using namespace std;
 class euler13
 {
 public:
-	euler13(){sumDigits();}
-	~euler13(){}
-	void sumDigits();
-private:
-	mpz_t sum;
-	mpz_t dline;
-};
+	euler13()
+	{
+		sumDigits();
+	}
 
-void euler13::sumDigits()
+private:
+void sumDigits()
 {
 	mpz_init(sum);
 	mpz_init(dline);
@@ -27,6 +25,7 @@ void euler13::sumDigits()
 	mpz_set_ui(dline,0);
 	ifstream iStream("digits");
 	string line;
+	
 	if(iStream.is_open())
 	{
 		while(getline(iStream,line))
@@ -44,6 +43,11 @@ void euler13::sumDigits()
 		std::cout << "unable to open file" << std::endl;
 	}
 }
+	
+	mpz_t sum;
+	mpz_t dline;
+};
+
 
 int main()
 {
