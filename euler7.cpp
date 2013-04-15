@@ -44,7 +44,7 @@ int main()
 		if((*it).second == true)
 			++count;
 		if(count == 10001){
-			std::cout << "The 10001th prime is "
+			std::cout << "The 10001st prime is "
 			       	<< (*it).first << std::endl;
 		break;
 		}
