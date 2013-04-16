@@ -1,1 +1,1 @@
-some euler solutions
+My attempt to Project Euler solutions in c++
