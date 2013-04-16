@@ -26,7 +26,7 @@ int main()
 			prod = tmp;
 		tmp = 1;
 	}
-	std::cout << prod << std::endl;
+	std::cout << "Largest product for consecutive 5 digits is " << prod << std::endl;
 
 	return 0;
 }
