@@ -1,1 +1,1 @@
-My attempt to Project Euler solutions in c++
+My attempt at Project Euler solutions in c++
