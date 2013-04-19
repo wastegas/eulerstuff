@@ -1,2 +1,5 @@
-*~	#no backup files
+# no backup files
+*~
+
+* exclude build folder
 build/
