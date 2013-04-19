@@ -8,7 +8,10 @@ int main()
 	std::ifstream in("digits");
 	
 	if(!in.is_open())
+	{
+		std::cerr << "unable to open file" << std::endl;
 		return -1;
+	}
 
 	while(std::getline(in, line,'\n')){
 		for(auto it=line.begin(); it != line.end(); ++it)
