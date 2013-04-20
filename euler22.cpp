@@ -44,6 +44,11 @@ int main()
 			}
 		}
 	
+	}
+	else
+	{
+		std::cerr << "cannot open file" << std::endl;
+		return -1;
 	}	
 	fs.close();
 
