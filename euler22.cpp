@@ -14,10 +14,10 @@ int main()
 		alpha.insert(std::make_pair<char&, int&>(a, i));
 		a++;
 	}
-
+	/*
 	for(auto it=alpha.begin(); it != alpha.end(); ++it)
 		std::cout << (*it).first << " " << (*it).second << std::endl;
-
+	*/
 	std::ifstream fs("names.txt");
 	std::string line;
 
@@ -51,11 +51,19 @@ int main()
 	fs.close();
 
 	sort(nameslist.begin(), nameslist.end());
-
+	int sumword = 0;
+	int sum = 0;
 	for(auto it = nameslist.begin(); it != nameslist.end(); ++it)
-		std::cout << (*it) << std::endl;
+	{
+		//std::cout << (*it) << std::endl;
+		for(auto &c : (*it)){
+			std::cout << c;
+			sumword += alpha.find(c)->second;
+		}
+		std::cout << ' ' << sumword  << std::endl;
+		break;
 	
-	
+	}
 
 	return 0;
 
