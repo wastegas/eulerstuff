@@ -6,7 +6,6 @@ void propDiv(int &n, int &pdsum)
 	{
 		if( n % i == 0)
 		{
-			std::cout << i << ' ';	
 			pdsum += i;
 		}
 	}
@@ -15,29 +14,25 @@ void propDiv(int &n, int &pdsum)
 
 int main()
 {
-	int pdsum = 0;
 	int a = 0;
 	int b = 0;
 	int sum = 0;
 	int s1 = 0;
 	int s2 = 0;
 	
-	for(int i = 2; i < 20; ++i)
+	for(int i = 2; i < 10000; ++i)
 	{
 		a = i;
-		std::cout << a << ' ';
 		propDiv(a, s1);
-		std::cout << std::endl;
 		b = s1;
-		std::cout << b << ' ';
 		propDiv(b, s2);
-		std::cout << std::endl;
-		if( a == s2)
+		if( a == s2 && b == s1 && a != b)
 		{
 			sum += a;
-			sum += b;
 		}
+		s1 = 0;
+		s2 = 0;
 	}
-	std::cout << sum << std::endl;
+	std::cout << "sum of amicable numbers under 10000 is " <<  sum << std::endl;
 	return 0;
 }
