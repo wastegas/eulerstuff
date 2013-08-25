@@ -45,6 +45,7 @@ int main(int argc, char* argv[])
 	if (argc < 2)
 	{
 		std::cout << "Usage: euler20 <some number>" << std::endl;
+		return -1;
 	}
 
 	factorial F(atoi(argv[1]));
